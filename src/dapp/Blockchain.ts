@@ -146,7 +146,7 @@ export class BlockChain {
       this.oldInventory = null;
       const chainId = await this.web3.eth.getChainId();
 
-      if (chainId === 137) {
+      if (chainId === 56) {
         await this.connectToMatic();
 
         await this.loadFarm();
