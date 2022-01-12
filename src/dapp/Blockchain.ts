@@ -61,11 +61,11 @@ export class BlockChain {
     try {
       this.token = new this.web3.eth.Contract(
         Token as any,
-        "0xdf9B4b57865B403e08c85568442f95c26b7896b0"
+        "0x48959Ad4ebE6EE74184fEe497a378621bdec22eD"
       );
       this.farm = new this.web3.eth.Contract(
         Farm as any,
-        "0x6e5Fa679211d7F6b54e14E187D34bA547c5d3fe0"
+        "0x0d267c40f17bffcea0ba125b69fc31b3b2b2199a"
       );
       this.chickens = new this.web3.eth.Contract(
         Chicken as any,
@@ -89,11 +89,11 @@ export class BlockChain {
 
       this.alchemyToken = new this.web3.eth.Contract(
         Token as any,
-        "0xdf9B4b57865B403e08c85568442f95c26b7896b0"
+        "0x48959Ad4ebE6EE74184fEe497a378621bdec22eD"
       );
       this.alchemyFarm = new this.web3.eth.Contract(
         Farm as any,
-        "0x6e5Fa679211d7F6b54e14E187D34bA547c5d3fe0"
+        "0x0d267c40f17bffcea0ba125b69fc31b3b2b2199a"
       );
     } catch (e) {
       // Timeout, retry
@@ -146,7 +146,7 @@ export class BlockChain {
       this.oldInventory = null;
       const chainId = await this.web3.eth.getChainId();
 
-      if (chainId === 56) {
+      if (chainId === 97) {
         await this.connectToMatic();
 
         await this.loadFarm();
